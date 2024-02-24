@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+  - dashbord
+{% endblock title %}
+
+
+{% block content %}
+  <h1>Bienvenue dans ton tableau de bord {{ user }}</h1>
+  <br>
+  <p><a href="{% url 'password_change' %}">Modifier le mot de passe</a></p>
+  <p><a href="{% url 'logout_user' %}">Déconnexion</a></p>
+{% endblock content %}
