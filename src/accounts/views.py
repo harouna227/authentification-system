@@ -17,9 +17,10 @@ def register(request):
     if request.method == 'POST':
         user_form = UserRegistration(request.POST)
         if user_form.is_valid():
-            user = user_form.save(commit=False)
+            # user = user_form.save(commit=False)
             # user.set_password(user_form.cleaned_data['password'])
-            user.save()
+            user_form.save()
+            # user.save()
             return redirect('login')
     else:
         user_form = UserRegistration()

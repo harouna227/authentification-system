@@ -8,7 +8,7 @@ class UserRegistration(forms.ModelForm):
     password2 = forms.CharField(widget=forms.PasswordInput)
     
     class Meta:
-        model = User
+        model = User 
         fields = (
             'username',
             'first_name',
@@ -18,8 +18,11 @@ class UserRegistration(forms.ModelForm):
         
     def clean_password(self):
         password = self.cleaned_data.get('password')
+        return password
+              
+    def clean_password2(self):
         password2 = self.cleaned_data.get('password2')
-        if password != password2:
+        if self.clean_password() != password2:
             raise forms.ValidationError("Password didn't match")
 
     # def check_password(self):
