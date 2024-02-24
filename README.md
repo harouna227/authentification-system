@@ -8,9 +8,9 @@ Les utilisateurs sont identifiés avec leur Username
 En cas de Réstauration de mot de passe, un email et envoyer à l'utiliseur lui rédireger vers la passe de restauration de mot de passse.
 
 ## Admin
-1. Manager les utiliseurs 
-2. Manager les Groupes
-3. Manager les permissions
+1. Gérer les utiliseurs 
+2. Gérer les Groupes
+3. Gérer les permissions
 
 ## L'utilisateur simple
 1. Crée un compte 
